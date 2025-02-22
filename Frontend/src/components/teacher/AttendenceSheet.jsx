@@ -132,7 +132,9 @@ function AttendanceSheet() {
         </h3>
       </div>
       {isLoading ? (
-        <p>Loading...</p>
+        <div className="flex justify-center items-center">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+        </div>
       ) : students &&
         attendances &&
         students.length > 0 &&
@@ -208,7 +210,7 @@ function AttendanceSheet() {
       <br />
       
         <button
-        className="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded cursor-pointer"
+        className="bg-linear-65 from-pink-500 to-purple-500 text-white py-2 px-4 rounded cursor-pointer"
         onClick={() => {
           // submit attendances to database
           submitAttendances(attendances);
